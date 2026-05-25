@@ -1,0 +1,59 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 600px;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.search-box {
+  margin-bottom: 15px;
+}
+
+.search-box input {
+  padding: 5px;
+  width: 200px;
+}
+
+.search-box button {
+  margin-left: 5px;
+}
+
+.filter-box {
+  margin-bottom: 15px;
+}
+
+.filter-box button {
+  margin-left: 5px;
+}
+
+.form-box {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 15px;
+  background-color: white;
+}
+
+.form-box input {
+  padding: 5px;
+}
+
+.todo-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: white;
+}
+
+.todo-card button {
+  margin-right: 5px;
+}
