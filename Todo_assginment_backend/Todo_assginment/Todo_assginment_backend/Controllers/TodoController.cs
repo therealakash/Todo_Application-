@@ -56,14 +56,14 @@ namespace Todo_assginment.Controllers
         }
 
         [HttpGet("categorize/{categorize}")]
-        public async Task<ActionResult<IEnumerable>> GetByCategorize([FromQuery] Categorize categorize)
+        public async Task<ActionResult<IEnumerable>> GetByCategorize( Categorize categorize)
         {
             var todos = await _todoService.GetByCategorize(categorize);
             return Ok(todos);
         }
 
         [HttpGet("priority/{priority}")]
-        public async Task<ActionResult<IEnumerable>> GetByPriority([FromQuery] PriorityLevel priority)
+        public async Task<ActionResult<IEnumerable>> GetByPriority( PriorityLevel priority)
         {
             var todos = await _todoService.GetByPrioroty(priority);
             return Ok(todos);

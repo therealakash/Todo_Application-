@@ -42,6 +42,8 @@ function App() {
   function handlePriority(pri) {
     getByPriority(pri).then(function (res) {
       setTodos(res.data);
+    }).catch(function () {
+      setTodos([]);
     });
   }
 

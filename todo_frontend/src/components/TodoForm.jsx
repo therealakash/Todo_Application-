@@ -6,7 +6,7 @@ function TodoForm(props) {
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
     const [priority, setPriority] = useState("low");
-    const [category, setCategory] = useState("work");
+    const [categorize, setCategorize] = useState("work");
 
     var isEditing = props.editingTodo ? true : false;
 
@@ -15,14 +15,14 @@ function TodoForm(props) {
             setTitle(props.editingTodo.title);
             setDescription(props.editingTodo.description);
             setPriority(props.editingTodo.priority);
-            setCategory(props.editingTodo.category);
+            setCategorize(props.editingTodo.categorize);
         }
     }, [props.editingTodo]);
 
     function handleSubmit(e) {
         e.preventDefault();
 
-        var data = { title, description, priority, category };
+        var data = { title, description, priority, categorize };
 
         if (isEditing) {
             props.onUpdate(props.editingTodo.id, data);
@@ -35,7 +35,7 @@ function TodoForm(props) {
         setTitle("");
         setDescription("");
         setPriority("low");
-        setCategory("work");
+        setCategorize("work");
     }
 
     return (
@@ -57,7 +57,7 @@ function TodoForm(props) {
                 </select><br/><br/>
 
                 <label>Category </label>
-                <select value={category} onChange={(e) => setCategory(e.target.value)}>
+                <select value={categorize} onChange={(e) => setCategorize(e.target.value)}>
                     <option value="work">Work</option>
                     <option value="personal">Personal</option>
                 </select><br/><br/>

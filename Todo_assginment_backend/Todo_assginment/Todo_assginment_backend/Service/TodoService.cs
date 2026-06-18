@@ -59,10 +59,6 @@ namespace Todo_assginment.Service
         public async Task<List<Todo>> GetByPrioroty(PriorityLevel priority)
         {
             var todos = await context.Todos.Where(t => t.Priority == priority).ToListAsync();
-            if (todos.Count == 0)
-            {
-                throw new NotFoundException("No todos found with the specified priority");
-            }
             return todos;
         }
 
